@@ -1,48 +1,59 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Desktop (JVM).
+# Tugas 1: Pengenalan KMP & Setup Environment 🚀
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
+![Kotlin](https://img.shields.io/badge/Kotlin-2.0-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
+![Compose Multiplatform](https://img.shields.io/badge/Compose_Multiplatform-UI-4285F4?style=for-the-badge&logo=jetpack-compose&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-Android_%7C_iOS_%7C_Desktop-success?style=for-the-badge)
 
-* [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
-
-### Build and Run Android Application
-
-To build and run the development version of the Android app, use the run configuration from the run widget
-in your IDE’s toolbar or build it directly from the terminal:
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:assembleDebug
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:assembleDebug
-  ```
-
-### Build and Run Desktop (JVM) Application
-
-To build and run the development version of the desktop app, use the run configuration from the run widget
-in your IDE’s toolbar or run it directly from the terminal:
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:run
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:run
-  ```
-
-### Build and Run iOS Application
-
-To build and run the development version of the iOS app, use the run configuration from the run widget
-in your IDE’s toolbar or open the [/iosApp](./iosApp) directory in Xcode and run it from there.
+Repository ini berisi hasil pengerjaan **Tugas Praktikum Minggu 1** untuk mata kuliah **Pengembangan Aplikasi Mobile (IF25-22017)** di Institut Teknologi Sumatera (ITERA). Proyek ini dibangun menggunakan **Kotlin Multiplatform (KMP)** dengan antarmuka **Compose Multiplatform**.
 
 ---
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+## 👤 Identitas Mahasiswa
+
+| Informasi | Detail |
+| :--- | :--- |
+| **Nama** | **Muhammad Fajri Firdaus** |
+| **NIM** | **123140050** |
+| **Program Studi** | Teknik Informatika |
+| **Instansi** | Institut Teknologi Sumatera (ITERA) |
+
+---
+
+## 📱 Hasil Aplikasi (Screenshot)
+
+Berikut adalah tampilan aplikasi yang dijalankan pada **Android Emulator (API 36)**:
+
+<p align="center">
+  <img src="screenshot_app.jpg" alt="Tampilan Aplikasi Android" width="350" style="border-radius: 15px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);"/>
+</p>
+
+> *Aplikasi menampilkan Logo ITERA (Vector), Identitas Mahasiswa, dan deteksi Platform secara dinamis.*
+
+---
+
+## 🛠️ Fitur & Modifikasi Kode
+
+Sesuai instruksi tugas, berikut adalah modifikasi yang telah dilakukan pada template *Hello World* bawaan:
+
+1.  **UI Modern dengan Material3**:
+    * Menggunakan `Card` dengan elevasi dan sudut membulat (`RoundedCornerShape`).
+    * Tata letak terpusat (*Central Alignment*) menggunakan `Box` dan `Column`.
+2.  **Identitas Personal**:
+    * Menampilkan Nama Lengkap dan NIM.
+3.  **Logo Kustom (Vector XML)**:
+    * Mengganti logo default Compose dengan **Logo ITERA**.
+    * Logo dibuat ulang menggunakan format `.xml` (Vector Drawable) agar tajam dan tidak pecah.
+4.  **Platform Detection**:
+    * Menggunakan pola `expect`/`actual` untuk mendeteksi sistem operasi perangkat (Android/iOS/Desktop).
+    * Fitur *Interactive Button* untuk menampilkan/menyembunyikan info platform.
+
+---
+
+## 🚀 Cara Menjalankan Project
+
+Clone repository ini, lalu buka di **Android Studio**.
+
+### Menjalankan di Android
+Jalankan perintah berikut di terminal atau gunakan tombol **Run** di Android Studio:
+```bash
+./gradlew :composeApp:installDebug
