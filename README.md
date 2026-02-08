@@ -24,8 +24,7 @@ Repository ini berisi hasil pengerjaan **Tugas Praktikum Minggu 1** untuk mata k
 Berikut adalah tampilan aplikasi yang dijalankan pada **Android Emulator (API 36)**:
 
 <p align="center">
-  <img src="[PAM-M1/image
-/Screenshot%2026-02-08%193227.png](https://github.com/fajrifirdaus/PAM-M1/blob/main/image/Screenshot%202026-02-08%20193227.png)" alt="Tampilan Aplikasi Android" width="350" style="border-radius: 15px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);"/>
+  <img width="1920" height="1200" alt="Image" src="https://github.com/user-attachments/assets/511bcfac-1d1f-4b3a-8e31-d8163b8006aa" />
 </p>
 
 > *Aplikasi menampilkan Logo ITERA (Vector), Identitas Mahasiswa, dan deteksi Platform secara dinamis.*
